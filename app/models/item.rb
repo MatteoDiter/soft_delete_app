@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-    #Soft delete method
+  #Soft delete method
   def soft_delete
     update(deleted_at: Time.current)
   end
