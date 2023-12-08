@@ -1,4 +1,6 @@
-# Matteo Diterlizzi: Soft Delete Application
+### Matteo Diterlizzi
+
+# Soft Delete Application
 
 Rails application to implement "soft delete" functionality for the `Item` model, marking records as "deleted" without physically removing them from the database.
 
@@ -36,6 +38,6 @@ Rails application to implement "soft delete" functionality for the `Item` model,
 
 ## Testing (spec/models/item_spec.rb)
 
-- soft Deletes an item: Verifies that the soft_delete method correctly marks an item as deleted by updating its deleted_at attribute.
+- soft deletes an item: Verifies that the soft_delete method correctly marks an item as deleted by updating its deleted_at attribute.
 - restores a soft-deleted item: Validates that the restore method successfully restores a soft-deleted item by setting its deleted_at attribute to nil.
 - excludes soft-deleted items from normal queries: Ensures that soft-deleted items are excluded from normal queries by checking that a soft-deleted item is not included in the result set when querying all items.
