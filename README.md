@@ -31,5 +31,5 @@ Rails application to implement "soft delete" functionality for the `Item` model,
 
 # Instances creation with facroty bot and faker gems (specs/models/item_specs.rb, specs/factories/items.rb)
 
-- item: Creates instances of an item with a random generate word as name attribute and nil as delete_at attribute.
-- soft_deleted_item: Creates instances of an item with soft deletion property, by updating the delete_at attribute to the current time.
+- item: Creates instances of an item with a randomly generated word as name attribute and nil as deleted_at attribute.
+- soft_deleted_item: Creates instances of an item with soft deletion property, by updating the deleted_at attribute to the current time.
