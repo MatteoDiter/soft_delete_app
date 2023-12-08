@@ -10,7 +10,7 @@ Rails application to implement "soft delete" functionality for the `Item` model,
   - sqlite3 v1.4 (database)
   - rspec v6.1.0 (testing)
   - factory bot rails v6.4.2 (instances factory)
-  - faker v3.2.2 (instances random generator)
+  - faker v3.2.2 (instances attributes generator)
 
 # Setup and testing
 
