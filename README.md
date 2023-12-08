@@ -1,4 +1,4 @@
-### [![Matteo Diterlizzi]](https://www.linkedin.com/in/matteo-diterlizzi/)
+### [Matteo Diterlizzi](https://www.linkedin.com/in/matteo-diterlizzi/)
 
 # Soft Delete Application
 
