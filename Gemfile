@@ -50,6 +50,8 @@ group :development, :test do
 end
 
 group :development do
+  # Adding Rspecs below as indicated on doc
+  gem 'rspec-rails', '~> 6.1.0'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
@@ -65,3 +67,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# ADding factory bot and faker for instances creation
+gem 'factory_bot_rails', '~> 6.4.2'
+gem 'faker', '~> 3.2.2'
