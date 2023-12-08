@@ -25,18 +25,20 @@ Rails application to implement "soft delete" functionality for the `Item` model,
 3. **Run tests**:
    bundle exec rspec
 
-## Core Item model methods (app/models/item.rb)
+## Functionalities
+
+### Core Item model methods (app/models/item.rb)
 
 - **soft_delete**: Soft deletes an item by updating the deleted_at attribute.
 - **restore**: Restores a soft-deleted item by setting deleted_at to nil.
 - **default scope**: Excludes soft-deleted items from normal queries.
 
-## Instances creation with facroty bot and faker gems (spec/factories/item.rb)
+### Instances creation with facroty bot and faker gems (spec/factories/item.rb)
 
 - **item**: Creates instances of an item with a randomly generated word as name attribute and nil as deleted_at attribute.
 - **soft_deleted_item**: Creates instances of an item with soft deletion property, by updating the deleted_at attribute to the current time.
 
-## Testing (spec/models/item_spec.rb)
+### Testing (spec/models/item_spec.rb)
 
 - **soft deletes an item**: Verifies that the soft_delete method correctly marks an item as deleted by updating its deleted_at attribute.
 - **restores a soft-deleted item**: Validates that the restore method successfully restores a soft-deleted item by setting its deleted_at attribute to nil.
