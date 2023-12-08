@@ -1,24 +1,35 @@
-# Soft Delete
+# Matteo Diterlizzi: Soft Delete Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails application to implement "soft delete" functionality for the `Item` model, marking records as "deleted" without physically removing them from the database.
 
-Things you may want to cover:
+- Ruby version: v3.2.2
 
-- Ruby version
+  - rails v7.1.2
 
-- System dependencies
+- Other added dependencies:
+  - sqlite3 v1.4 (database)
+  - rspec v6.1.0 (testing)
+  - factory bot rails v6.4.2 (instances factory)
+  - faker v3.2.2 (instances random generator)
 
-- Configuration
+# Setup and testing
 
-- Database creation
+1. Clone the repository:
+   git clone https://github.com/MatteoDiter/soft_delete_app.git
 
-- Database initialization
+2. Install dependencies:
+   bundle install
 
-- How to run the test suite
+3. Run tests:
+   bundle exec rspec
 
-- Services (job queues, cache servers, search engines, etc.)
+# Core Item model methods (app/models/item.rb)
 
-- Deployment instructions
+- soft_delete: Soft deletes an item by updating the deleted_at attribute.
+- restore: Restores a soft-deleted item by setting deleted_at to nil.
+- default scope: Excludes soft-deleted items from normal queries.
 
-- ...
+# Instances creation with facroty bot and faker gems (specs/models/item_specs.rb, specs/factories/items.rb)
+
+- item: Creates instances of an item with a random generate word as name attribute and nil as delete_at attribute.
+- soft_deleted_item: Creates instances of an item with soft deletion property, by updating the delete_at attribute to the current time.
