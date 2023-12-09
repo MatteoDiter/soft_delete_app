@@ -31,7 +31,7 @@ RSpec.describe Item, type: :model do
     expect { item.soft_delete }.not_to raise_error
   end
 
-  #testing that restoring an item that has not been soft-deleted should not raise an error
+  #testing that restoring an item that has not been soft-deleted does not raise an error
   it 'restoring not soft deleted item not causing errors' do
     item = create(:item)
 
